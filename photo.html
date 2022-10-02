@@ -1,0 +1,16 @@
+---
+title: Photos
+layout: base
+pagination:
+    data: photos.g4r3co3.media
+    size: 80
+---
+
+<h1>{{title}}</h1>
+<ul>
+    {% for photo in pagination.items -%}
+    <li style="display:inline "> <a href="{{ photo.id }}">
+        <img src="{{photo.src.tiny}}" alt="{{photo.alt}}"></a>
+    </li>
+    {% endfor -%}
+</ul>
