@@ -20,13 +20,13 @@ pagination:
     </ul>
         <nav>
             {% if pagination.href.previous %}
-            <a href="{{pagination.href.previous}}"><b>Previous Page</b></a></li>
+            <a style="padding-left:38px" href="{{pagination.href.previous}}"><b>Previous Page</b></a></li>
             {% else %}
             &nbsp;
             {% endif %}
         
             {% if pagination.href.next %}
-            <a href="{{pagination.href.next}}"><b>Next Page</b></a>
+            <a style="padding-right:190px" href="{{pagination.href.next}}"><b>Next Page</b></a>
             {% endif %}
         </nav>
         </main>
