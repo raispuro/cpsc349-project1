@@ -2,7 +2,7 @@
 layout: base
 title: Photos
 pagination:
-    data: photos.g4r3co3.media
+    data: photos.xxxmtks.media
     size: 1
     alias: photo
 permalink: "/{{photo.id}}/"
@@ -10,10 +10,22 @@ permalink: "/{{photo.id}}/"
 
 <h1>{{title}}</h1>
 
-{{ photo.id }} 
+{{ photo.id }}
 
 {{photo.photographer_url}}
 
 {{photo.photographer}}
 
 <img src="{{photo.src.landscape}}" alt="{{photo.alt}}">
+
+<nav>
+    {% if pagination.href.previous %}
+    <a href="{{pagination.href.previous}}"><b>Previous</b></a></li>
+    {% else %}
+    &nbsp;
+    {% endif %}
+
+    {% if pagination.href.next %}
+    <a href="{{pagination.href.next}}"><b>Next</b></a>
+    {% endif %}
+</nav>
