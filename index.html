@@ -2,36 +2,34 @@
 layout: base
 title: Home
 pagination:
-    data: photos.g4r3co3.media
-    size: 24
+    data: photos.xxxmtks.media
+    size: 18
     alias: photo
 ---
 <header>
     <h1>{{ title}} </h1>
+
 </header>
-<body style="margin:30px;padding:30px">
+<main>
     <ul>
         {% for photo in pagination.items -%}
-        <li style="display:inline; padding-left: 5px; border: 10px"> <a href="/{{ photo.id }}/">
+        <li style="display:inline"> <a href="/{{ photo.id }}/">
             <img src="{{photo.src.tiny}}" alt="{{photo.alt}}"></a>
         </li>
         {% endfor -%}
     </ul>
         <nav>
             {% if pagination.href.previous %}
-            <a href="{{pagination.href.previous}}"><b>Previous</b></a></li>
+            <a href="{{pagination.href.previous}}"><b>Previous Page</b></a></li>
             {% else %}
             &nbsp;
             {% endif %}
         
             {% if pagination.href.next %}
-            <a href="{{pagination.href.next}}"><b>Next</b></a>
+            <a href="{{pagination.href.next}}"><b>Next Page</b></a>
             {% endif %}
         </nav>
-    
-   
-</body>
-
+        </main>
 <footer>
     <hr>
     <p>
