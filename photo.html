@@ -1,16 +1,19 @@
 ---
-title: Photos
 layout: base
+title: Photos
 pagination:
     data: photos.g4r3co3.media
-    size: 80
+    size: 1
+    alias: photo
+permalink: "/{{photo.id}}/"
 ---
 
 <h1>{{title}}</h1>
-<ul>
-    {% for photo in pagination.items -%}
-    <li style="display:inline "> <a href="{{ photo.id }}">
-        <img src="{{photo.src.tiny}}" alt="{{photo.alt}}"></a>
-    </li>
-    {% endfor -%}
-</ul>
+
+{{ photo.id }} 
+
+{{photo.photographer_url}}
+
+{{photo.photographer}}
+
+<img src="{{photo.src.landscape}}" alt="{{photo.alt}}">
