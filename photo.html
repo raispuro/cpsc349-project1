@@ -10,19 +10,19 @@ permalink: "/{{photo.id}}/"
 <body style="color: white;background: {{photo.avg_color}}">
 <h1 style= "font-size: 40px; color: white;text-align: center">{{photo.alt}}</h1>
 
-  <p style = "padding-left: 300px"> <img src="{{photo.src.landscape}}" alt="{{photo.alt}}"> </p>
+  <p style = "margin: 0 175px;"> <img src="{{photo.src.landscape}}" alt="{{photo.alt}}"> </p>
   <p style= "color: white;text-align: center"> {{ photo.id }} </p>
   <p style= "color: white;text-align: center"> {{photo.photographer_url}} </p>
   <p style= "color: white;text-align: center"> Photographer - {{photo.photographer}} </p>
 
   <nav>
       {% if pagination.href.previous %}
-      <a href="{{pagination.href.previous}}"><b>Previous</b></a></li>
+      <a href="{{pagination.href.previous}}" style="margin-left: 10px;"><b>Previous</b></a></li>
       {% else %}
       &nbsp;
       {% endif %}
 
       {% if pagination.href.next %}
-      <a href="{{pagination.href.next}}"><b>Next</b></a>
+      <a href="{{pagination.href.next}}" style="margin-right: 10px;"><b>Next</b></a>
       {% endif %}
   </nav>
