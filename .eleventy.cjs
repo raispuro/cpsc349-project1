@@ -6,7 +6,7 @@ module.exports = function (eleventyConfig) {
   })
   return {
     dir: {
-      output: "main"
+      output: "docs"
     }
   }
 };
