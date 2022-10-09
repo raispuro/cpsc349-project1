@@ -13,7 +13,7 @@ pagination:
 <main>
     <ul>
         {% for photo in pagination.items -%}
-        <li style="display:inline"> <a href="/{{ photo.id }}/">
+        <li style="display:inline"> <a href="/cpsc349-project1/{{ photo.id }}/">
             <img src="{{photo.src.tiny}}" alt="{{photo.alt}}"></a>
         </li>
         {% endfor -%}
